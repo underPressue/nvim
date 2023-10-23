@@ -19,3 +19,5 @@ _G.get_visual_selection = function()
   end
   return table.concat(lines, '\n')
 end
+
+vim.opt.relativenumber = true
