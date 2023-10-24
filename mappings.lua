@@ -5,9 +5,24 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<C-j>"] = { "<C-e>", "Screen down", opts = { nowait = true } },
+    ["<C-k>"] = { "<C-y>", "Screen up", opts = { nowait = true } },
     ["<leader>S"] = {'<cmd>lua require("spectre").toggle()<CR>', "Toggle Spectre" },
     ["<leader>sw"] = {'<cmd>lua require("spectre").open_visual({select_word=true})<CR>', "Search current word" },
     ["<leader>sc"] = {'<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', "Search on current file" },
+    ["<S-l>"] = {
+      function()
+        require("nvchad.tabufline").tabuflineNext()
+      end,
+      "Goto next buffer",
+    },
+
+    ["<S-h>"] = {
+      function()
+        require("nvchad.tabufline").tabuflinePrev()
+      end,
+      "Goto prev buffer",
+    },
   },
   v = {
     [">"] = { ">gv", "indent" },
