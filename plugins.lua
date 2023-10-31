@@ -83,6 +83,11 @@ local plugins = {
         "nvim-lua/plenary.nvim",
       },
     },
+    config = function()
+      require("spectre").setup({
+        open_cmd = "new",
+      })
+    end,
   },
   {
     "rmagatti/auto-session",
