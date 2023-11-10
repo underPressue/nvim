@@ -5,8 +5,8 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<C-j>"] = { "<C-e>", "Screen down", opts = { nowait = true } },
-    ["<C-k>"] = { "<C-y>", "Screen up", opts = { nowait = true } },
+    ["<A-j>"] = { "<C-e>", "Screen down", opts = { nowait = true } },
+    ["<A-k>"] = { "<C-y>", "Screen up", opts = { nowait = true } },
     -- Search with Spectre
     ["<leader>S"] = {'<cmd>lua require("spectre").toggle()<CR>', "Toggle Spectre" },
     ["<leader>sw"] = {'<cmd>lua require("spectre").open_visual({select_word=true})<CR>', "Search current word" },
