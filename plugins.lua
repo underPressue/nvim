@@ -112,6 +112,10 @@ local plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- }
+  {
+    "prisma/vim-prisma",
+    lazy = false,
+  },
 }
 
 return plugins
